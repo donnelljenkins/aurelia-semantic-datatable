@@ -18,6 +18,11 @@ System.config({
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
+    "semantic-ui": "github:Semantic-Org/Semantic-UI@2.1.6",
+    "github:Semantic-Org/Semantic-UI@2.1.6": {
+      "css": "github:systemjs/plugin-css@0.1.19",
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
