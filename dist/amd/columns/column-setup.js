@@ -13,7 +13,7 @@ define(["exports", "../utility"], function (exports, _utility) {
 		setup: function setup() {
 			this.templatePrefix = _utility2["default"].snakeCase(this.__proto__.constructor.name);
 			this.heading = this.heading || _utility2["default"].camelCase(this.property);
-			this.grid.addColumn(this);
+			this.dataTable.addColumn(this);
 		}
 	};
 

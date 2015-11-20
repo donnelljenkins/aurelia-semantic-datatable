@@ -5,6 +5,6 @@ export function configure(aurelia) {
   	'columns/button-column',
   	'columns/column',
   	'columns/custom-column',
-  	'grid'
+  	'data-table'
   ]);
 }

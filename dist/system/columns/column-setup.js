@@ -11,7 +11,7 @@ System.register(["../utility"], function (_export) {
 				setup: function setup() {
 					this.templatePrefix = utility.snakeCase(this.__proto__.constructor.name);
 					this.heading = this.heading || utility.camelCase(this.property);
-					this.grid.addColumn(this);
+					this.dataTable.addColumn(this);
 				}
 			};
 

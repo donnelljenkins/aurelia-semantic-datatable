@@ -12,7 +12,7 @@ function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _des
 
 var _aureliaFramework = require("aurelia-framework");
 
-var _grid = require("../grid");
+var _dataTable = require("../data-table");
 
 var _columnSetup = require("./column-setup");
 
@@ -47,7 +47,7 @@ var Column = (function () {
 		enumerable: true
 	}], null, _instanceInitializers);
 
-	function Column(grid) {
+	function Column(dataTable) {
 		_classCallCheck(this, _Column);
 
 		_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -60,7 +60,7 @@ var Column = (function () {
 
 		_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-		this.grid = grid;
+		this.dataTable = dataTable;
 		Object.assign(this, _columnSetup.columnSetup);
 	}
 
@@ -72,7 +72,7 @@ var Column = (function () {
 	}], null, _instanceInitializers);
 
 	var _Column = Column;
-	Column = (0, _aureliaFramework.inject)(_grid.Grid)(Column) || Column;
+	Column = (0, _aureliaFramework.inject)(_dataTable.DataTable)(Column) || Column;
 	Column = (0, _aureliaFramework.noView)(Column) || Column;
 	return Column;
 })();

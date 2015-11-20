@@ -1,7 +1,7 @@
 System.register(["aurelia-framework", "./filtering/filterer", "./sorting/sorter"], function (_export) {
 	"use strict";
 
-	var bindable, inject, Filterer, Sorter, Grid;
+	var bindable, inject, Filterer, Sorter, DataTable;
 
 	var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === "function") { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError("The decorator for method " + descriptor.key + " is of the invalid type " + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
 
@@ -19,11 +19,11 @@ System.register(["aurelia-framework", "./filtering/filterer", "./sorting/sorter"
 			Sorter = _sortingSorter.Sorter;
 		}],
 		execute: function () {
-			Grid = (function () {
+			DataTable = (function () {
 				var _instanceInitializers = {};
 				var _instanceInitializers = {};
 
-				_createDecoratedClass(Grid, [{
+				_createDecoratedClass(DataTable, [{
 					key: "datasource",
 					decorators: [bindable],
 					initializer: null,
@@ -40,8 +40,8 @@ System.register(["aurelia-framework", "./filtering/filterer", "./sorting/sorter"
 					enumerable: true
 				}], null, _instanceInitializers);
 
-				function Grid(filterer, sorter) {
-					_classCallCheck(this, _Grid);
+				function DataTable(filterer, sorter) {
+					_classCallCheck(this, _DataTable);
 
 					_defineDecoratedPropertyDescriptor(this, "datasource", _instanceInitializers);
 
@@ -54,7 +54,7 @@ System.register(["aurelia-framework", "./filtering/filterer", "./sorting/sorter"
 					this.sorter = sorter;
 				}
 
-				_createDecoratedClass(Grid, [{
+				_createDecoratedClass(DataTable, [{
 					key: "filtersChangedChanged",
 					value: function filtersChangedChanged(newValue) {
 						this.filterer.filtersChanged = newValue;
@@ -71,12 +71,12 @@ System.register(["aurelia-framework", "./filtering/filterer", "./sorting/sorter"
 					}
 				}], null, _instanceInitializers);
 
-				var _Grid = Grid;
-				Grid = inject(Filterer, Sorter)(Grid) || Grid;
-				return Grid;
+				var _DataTable = DataTable;
+				DataTable = inject(Filterer, Sorter)(DataTable) || DataTable;
+				return DataTable;
 			})();
 
-			_export("Grid", Grid);
+			_export("DataTable", DataTable);
 		}
 	};
 });

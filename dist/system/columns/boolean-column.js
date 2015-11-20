@@ -1,7 +1,7 @@
-System.register(["aurelia-framework", "../grid", "./column-setup"], function (_export) {
+System.register(["aurelia-framework", "../data-table", "./column-setup"], function (_export) {
 	"use strict";
 
-	var bindable, inject, noView, Grid, columnSetup, BooleanColumn;
+	var bindable, inject, noView, DataTable, columnSetup, BooleanColumn;
 
 	var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === "function") { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError("The decorator for method " + descriptor.key + " is of the invalid type " + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
 
@@ -14,8 +14,8 @@ System.register(["aurelia-framework", "../grid", "./column-setup"], function (_e
 			bindable = _aureliaFramework.bindable;
 			inject = _aureliaFramework.inject;
 			noView = _aureliaFramework.noView;
-		}, function (_grid) {
-			Grid = _grid.Grid;
+		}, function (_dataTable) {
+			DataTable = _dataTable.DataTable;
 		}, function (_columnSetup) {
 			columnSetup = _columnSetup.columnSetup;
 		}],
@@ -53,7 +53,7 @@ System.register(["aurelia-framework", "../grid", "./column-setup"], function (_e
 					enumerable: true
 				}], null, _instanceInitializers);
 
-				function BooleanColumn(grid) {
+				function BooleanColumn(dataTable) {
 					_classCallCheck(this, _BooleanColumn);
 
 					_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -66,7 +66,7 @@ System.register(["aurelia-framework", "../grid", "./column-setup"], function (_e
 
 					_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-					this.grid = grid;
+					this.dataTable = dataTable;
 					Object.assign(this, columnSetup);
 				}
 
@@ -78,7 +78,7 @@ System.register(["aurelia-framework", "../grid", "./column-setup"], function (_e
 				}], null, _instanceInitializers);
 
 				var _BooleanColumn = BooleanColumn;
-				BooleanColumn = inject(Grid)(BooleanColumn) || BooleanColumn;
+				BooleanColumn = inject(DataTable)(BooleanColumn) || BooleanColumn;
 				BooleanColumn = noView(BooleanColumn) || BooleanColumn;
 				return BooleanColumn;
 			})();

@@ -1,4 +1,4 @@
-define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (exports, _aureliaFramework, _grid, _columnSetup) {
+define(["exports", "aurelia-framework", "../data-table", "./column-setup"], function (exports, _aureliaFramework, _dataTable, _columnSetup) {
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -61,7 +61,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 			enumerable: true
 		}], null, _instanceInitializers);
 
-		function ButtonColumn(grid) {
+		function ButtonColumn(dataTable) {
 			_classCallCheck(this, _ButtonColumn);
 
 			_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -80,7 +80,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 
 			_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-			this.grid = grid;
+			this.dataTable = dataTable;
 			Object.assign(this, _columnSetup.columnSetup);
 		}
 
@@ -92,7 +92,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 		}], null, _instanceInitializers);
 
 		var _ButtonColumn = ButtonColumn;
-		ButtonColumn = (0, _aureliaFramework.inject)(_grid.Grid)(ButtonColumn) || ButtonColumn;
+		ButtonColumn = (0, _aureliaFramework.inject)(_dataTable.DataTable)(ButtonColumn) || ButtonColumn;
 		ButtonColumn = (0, _aureliaFramework.noView)(ButtonColumn) || ButtonColumn;
 		return ButtonColumn;
 	})();

@@ -7,6 +7,6 @@ define(['exports'], function (exports) {
   exports.configure = configure;
 
   function configure(aurelia) {
-    aurelia.globalResources(['columns/boolean-column', 'columns/button-column', 'columns/column', 'columns/custom-column', 'grid']);
+    aurelia.globalResources(['columns/boolean-column', 'columns/button-column', 'columns/column', 'columns/custom-column', 'data-table']);
   }
 });

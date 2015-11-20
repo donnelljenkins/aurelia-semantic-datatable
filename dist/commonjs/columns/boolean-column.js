@@ -12,7 +12,7 @@ function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _des
 
 var _aureliaFramework = require("aurelia-framework");
 
-var _grid = require("../grid");
+var _dataTable = require("../data-table");
 
 var _columnSetup = require("./column-setup");
 
@@ -49,7 +49,7 @@ var BooleanColumn = (function () {
 		enumerable: true
 	}], null, _instanceInitializers);
 
-	function BooleanColumn(grid) {
+	function BooleanColumn(dataTable) {
 		_classCallCheck(this, _BooleanColumn);
 
 		_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -62,7 +62,7 @@ var BooleanColumn = (function () {
 
 		_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-		this.grid = grid;
+		this.dataTable = dataTable;
 		Object.assign(this, _columnSetup.columnSetup);
 	}
 
@@ -74,7 +74,7 @@ var BooleanColumn = (function () {
 	}], null, _instanceInitializers);
 
 	var _BooleanColumn = BooleanColumn;
-	BooleanColumn = (0, _aureliaFramework.inject)(_grid.Grid)(BooleanColumn) || BooleanColumn;
+	BooleanColumn = (0, _aureliaFramework.inject)(_dataTable.DataTable)(BooleanColumn) || BooleanColumn;
 	BooleanColumn = (0, _aureliaFramework.noView)(BooleanColumn) || BooleanColumn;
 	return BooleanColumn;
 })();

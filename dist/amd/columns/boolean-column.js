@@ -1,4 +1,4 @@
-define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (exports, _aureliaFramework, _grid, _columnSetup) {
+define(["exports", "aurelia-framework", "../data-table", "./column-setup"], function (exports, _aureliaFramework, _dataTable, _columnSetup) {
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -44,7 +44,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 			enumerable: true
 		}], null, _instanceInitializers);
 
-		function BooleanColumn(grid) {
+		function BooleanColumn(dataTable) {
 			_classCallCheck(this, _BooleanColumn);
 
 			_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -57,7 +57,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 
 			_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-			this.grid = grid;
+			this.dataTable = dataTable;
 			Object.assign(this, _columnSetup.columnSetup);
 		}
 
@@ -69,7 +69,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 		}], null, _instanceInitializers);
 
 		var _BooleanColumn = BooleanColumn;
-		BooleanColumn = (0, _aureliaFramework.inject)(_grid.Grid)(BooleanColumn) || BooleanColumn;
+		BooleanColumn = (0, _aureliaFramework.inject)(_dataTable.DataTable)(BooleanColumn) || BooleanColumn;
 		BooleanColumn = (0, _aureliaFramework.noView)(BooleanColumn) || BooleanColumn;
 		return BooleanColumn;
 	})();

@@ -1,9 +1,9 @@
 import { bindable, inject, noView } from "aurelia-framework";
-import { Grid } from "../grid";
+import { DataTable } from "../data-table";
 import { columnSetup } from "./column-setup";
 
 @noView
-@inject(Grid)
+@inject(DataTable)
 export class BooleanColumn {
 	@bindable alignment = 'center aligned';
 	@bindable filterable;
@@ -11,8 +11,8 @@ export class BooleanColumn {
 	@bindable property;
 	@bindable sortable;
 
-	constructor(grid) {
-		this.grid = grid;
+	constructor(dataTable) {
+		this.dataTable = dataTable;
 		Object.assign(this, columnSetup);
 	}
 

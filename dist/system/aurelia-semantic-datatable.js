@@ -4,7 +4,7 @@ System.register([], function (_export) {
   _export('configure', configure);
 
   function configure(aurelia) {
-    aurelia.globalResources(['columns/boolean-column', 'columns/button-column', 'columns/column', 'columns/custom-column', 'grid']);
+    aurelia.globalResources(['columns/boolean-column', 'columns/button-column', 'columns/column', 'columns/custom-column', 'data-table']);
   }
 
   return {

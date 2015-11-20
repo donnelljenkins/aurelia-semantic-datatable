@@ -12,7 +12,7 @@ function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _des
 
 var _aureliaFramework = require("aurelia-framework");
 
-var _grid = require("../grid");
+var _dataTable = require("../data-table");
 
 var _columnSetup = require("./column-setup");
 
@@ -52,7 +52,7 @@ var CustomColumn = (function () {
 		enumerable: true
 	}], null, _instanceInitializers);
 
-	function CustomColumn(grid) {
+	function CustomColumn(dataTable) {
 		_classCallCheck(this, _CustomColumn);
 
 		_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -67,7 +67,7 @@ var CustomColumn = (function () {
 
 		_defineDecoratedPropertyDescriptor(this, "view", _instanceInitializers);
 
-		this.grid = grid;
+		this.dataTable = dataTable;
 		Object.assign(this, _columnSetup.columnSetup);
 	}
 
@@ -79,7 +79,7 @@ var CustomColumn = (function () {
 	}], null, _instanceInitializers);
 
 	var _CustomColumn = CustomColumn;
-	CustomColumn = (0, _aureliaFramework.inject)(_grid.Grid)(CustomColumn) || CustomColumn;
+	CustomColumn = (0, _aureliaFramework.inject)(_dataTable.DataTable)(CustomColumn) || CustomColumn;
 	CustomColumn = (0, _aureliaFramework.noView)(CustomColumn) || CustomColumn;
 	return CustomColumn;
 })();

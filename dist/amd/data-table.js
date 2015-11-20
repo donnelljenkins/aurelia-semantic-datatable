@@ -11,11 +11,11 @@ define(["exports", "aurelia-framework", "./filtering/filterer", "./sorting/sorte
 
 	function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer ? descriptor.initializer.call(target) : undefined; Object.defineProperty(target, key, descriptor); }
 
-	var Grid = (function () {
+	var DataTable = (function () {
 		var _instanceInitializers = {};
 		var _instanceInitializers = {};
 
-		_createDecoratedClass(Grid, [{
+		_createDecoratedClass(DataTable, [{
 			key: "datasource",
 			decorators: [_aureliaFramework.bindable],
 			initializer: null,
@@ -32,8 +32,8 @@ define(["exports", "aurelia-framework", "./filtering/filterer", "./sorting/sorte
 			enumerable: true
 		}], null, _instanceInitializers);
 
-		function Grid(filterer, sorter) {
-			_classCallCheck(this, _Grid);
+		function DataTable(filterer, sorter) {
+			_classCallCheck(this, _DataTable);
 
 			_defineDecoratedPropertyDescriptor(this, "datasource", _instanceInitializers);
 
@@ -46,7 +46,7 @@ define(["exports", "aurelia-framework", "./filtering/filterer", "./sorting/sorte
 			this.sorter = sorter;
 		}
 
-		_createDecoratedClass(Grid, [{
+		_createDecoratedClass(DataTable, [{
 			key: "filtersChangedChanged",
 			value: function filtersChangedChanged(newValue) {
 				this.filterer.filtersChanged = newValue;
@@ -63,10 +63,10 @@ define(["exports", "aurelia-framework", "./filtering/filterer", "./sorting/sorte
 			}
 		}], null, _instanceInitializers);
 
-		var _Grid = Grid;
-		Grid = (0, _aureliaFramework.inject)(_filteringFilterer.Filterer, _sortingSorter.Sorter)(Grid) || Grid;
-		return Grid;
+		var _DataTable = DataTable;
+		DataTable = (0, _aureliaFramework.inject)(_filteringFilterer.Filterer, _sortingSorter.Sorter)(DataTable) || DataTable;
+		return DataTable;
 	})();
 
-	exports.Grid = Grid;
+	exports.DataTable = DataTable;
 });

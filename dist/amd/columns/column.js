@@ -1,4 +1,4 @@
-define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (exports, _aureliaFramework, _grid, _columnSetup) {
+define(["exports", "aurelia-framework", "../data-table", "./column-setup"], function (exports, _aureliaFramework, _dataTable, _columnSetup) {
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -42,7 +42,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 			enumerable: true
 		}], null, _instanceInitializers);
 
-		function Column(grid) {
+		function Column(dataTable) {
 			_classCallCheck(this, _Column);
 
 			_defineDecoratedPropertyDescriptor(this, "alignment", _instanceInitializers);
@@ -55,7 +55,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 
 			_defineDecoratedPropertyDescriptor(this, "sortable", _instanceInitializers);
 
-			this.grid = grid;
+			this.dataTable = dataTable;
 			Object.assign(this, _columnSetup.columnSetup);
 		}
 
@@ -67,7 +67,7 @@ define(["exports", "aurelia-framework", "../grid", "./column-setup"], function (
 		}], null, _instanceInitializers);
 
 		var _Column = Column;
-		Column = (0, _aureliaFramework.inject)(_grid.Grid)(Column) || Column;
+		Column = (0, _aureliaFramework.inject)(_dataTable.DataTable)(Column) || Column;
 		Column = (0, _aureliaFramework.noView)(Column) || Column;
 		return Column;
 	})();

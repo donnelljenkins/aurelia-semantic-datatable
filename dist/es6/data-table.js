@@ -3,7 +3,7 @@ import { Filterer } from "./filtering/filterer";
 import { Sorter } from "./sorting/sorter";
 
 @inject(Filterer, Sorter)
-export class Grid {
+export class DataTable {
 	@bindable datasource;
 	@bindable filtersChanged;
 	@bindable sortChanged;
