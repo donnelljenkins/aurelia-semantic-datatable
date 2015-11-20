@@ -1,0 +1,15 @@
+<template>
+	<div if.bind="column.filterable === ''">
+		<div class="ui basic icon buttons">
+			<button type="button" class="ui ${filterer.values[column.property] === undefined ? 'active' : ''} button" click.delegate="filterer.changeFilter(column, undefined)">
+				<i class="ui delete icon"></i>
+			</button>
+			<button type="button" class="ui ${filterer.values[column.property] === true ? 'active' : ''} button" click.delegate="filterer.changeFilter(column, true)">
+				<i class="ui circle icon"></i>
+			</button>
+			<button type="button" class="ui ${filterer.values[column.property] === false ? 'active' : ''} button" click.delegate="filterer.changeFilter(column, false)">
+				<i class="ui circle thin  icon"></i>
+			</button>
+		</div>
+	</div>
+</template>

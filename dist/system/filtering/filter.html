@@ -1,0 +1,11 @@
+<template>
+	<div if.bind="column.filterable === ''">
+		<div class="ui left icon input">
+			<i class="search icon"></i>
+			<input type="text" 
+				placeholder="Filter"
+				value.bind="filterer.values[column.property]"
+				oninput.bind="filterer.onInput(column) & debounce:300">
+		</div>
+	</div>
+</template>

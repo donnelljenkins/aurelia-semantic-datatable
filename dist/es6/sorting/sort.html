@@ -1,0 +1,18 @@
+<template>
+	<span if.bind="column.sortable === ''">
+		<button type="button"
+				tabindex="-1"
+				class="ui mini compact circular icon ${sorter.sort.property === column.property && sorter.sort.direction === 'asc' ? 'active' : 'basic'} button"
+				click.delegate="sorter.toggleSort(column, 'asc')">
+			<i class="ui chevron up icon"></i>
+		</button>
+		<button type="button"
+				tabindex="-1" 
+				class="ui mini compact circular icon ${sorter.sort.property === column.property && sorter.sort.direction === 'desc' ? 'active' : 'basic'} button"
+				click.delegate="sorter.toggleSort(column, 'desc')">
+			<i class="ui chevron down icon"></i>
+		</button>
+	</span>
+
+	<h6></h6>
+</template>

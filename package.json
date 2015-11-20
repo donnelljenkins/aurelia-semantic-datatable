@@ -1,0 +1,54 @@
+{
+  "name": "aurelia-semantic-datatable",
+  "version": "0.1.0",
+  "description": "A datatable plugin for Aurelia.",
+  "keywords": [
+    "aurelia",
+    "datatable",
+    "data",
+    "datagrid",
+    "plugin",
+    "semantic",
+    "semantic-ui"
+  ],
+  "homepage": "http://donthedev.com",
+  "bugs": {
+    "url": "https://github.com/donnelljenkins/aurelia-semantic-datatable/issues"
+  },
+  "author": "Donnell Jenkins <djenkins@donthedev.com> (http://donthedev.com)",
+  "main": "dist/commonjs/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aurelia/validation"
+  },
+  "jspm": {
+    "dependencies": {
+      "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.0.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "aurelia-tools": "^0.1.16",
+    "conventional-changelog": "^0.5.1",
+    "del": "^2.1.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-bump": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-yuidoc": "^0.1.2",
+    "object.assign": "^4.0.3",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "through2": "^2.0.0",
+    "vinyl-paths": "^2.1.0",
+    "yargs": "^3.30.0"
+  }
+}

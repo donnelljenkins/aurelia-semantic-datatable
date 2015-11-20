@@ -1,0 +1,25 @@
+<template>
+	<table class="ui striped table">
+		<thead>
+			<tr>
+				<th class="top aligned" repeat.for="column of columns">
+					<div class.bind="column.alignment + ' aligned'">
+						<compose view="./columns/${column.templatePrefix}-heading.html" containerless></compose>
+					</div>
+				</th>
+			</tr>			
+		</thead>
+
+		<tbody>
+			<tr repeat.for="row of datasource">
+				<td class.bind="column.alignment + ' aligned'" repeat.for="column of columns">
+					<compose view="./columns/${column.templatePrefix}-row.html" containerless></compose>
+				</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<template replaceable part="footer"></template>
+		</tfoot>
+	</table>
+</template>
