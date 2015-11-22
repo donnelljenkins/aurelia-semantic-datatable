@@ -12,7 +12,7 @@ var _utility2 = _interopRequireDefault(_utility);
 
 var columnSetup = {
   setup: function setup() {
-    this.templatePrefix = _utility2['default'].snakeCase(Onject.getPrototype(this).constructor.name);
+    this.templatePrefix = _utility2['default'].snakeCase(Object.getPrototype(this).constructor.name);
     this.heading = this.heading || _utility2['default'].camelCase(this.property);
     this.dataTable.addColumn(this);
   }
